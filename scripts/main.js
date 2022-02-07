@@ -1,4 +1,4 @@
-const ui = require("./scripts");
+const ui = require("./scripts/library");
 
 const core = require("./core");
 
