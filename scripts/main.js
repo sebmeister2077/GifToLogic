@@ -1,2 +1,3 @@
 
-new BaseDialog("Hello")
+var btn = new AboutDialog();
+btn.addCloseButton();
