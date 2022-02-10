@@ -1,9 +1,4 @@
-const _ui = new UI();
-
-_ui.showInfoText("This is a title","Second param")
-
-
-var btn = new AboutDialog();
-btn.addCloseButton();
-new BaseDialog("base dialog")
+Vars.ui.showInfoPopup("Hello", 50000, 10, 10, 10, 10, 10);
+Vars.ui.showInfo("Hi5?")
+Vars.ui.showStartupInfo("Begin game")
 
