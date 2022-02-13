@@ -1,1 +1,2 @@
-Vars.ui.showInfo("Hello from terminal?")
+const about = Vars.ui.about;
+about= new BaseDialog("hello")
