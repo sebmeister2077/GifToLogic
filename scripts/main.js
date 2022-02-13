@@ -1,11 +1,10 @@
-const about = Vars.ui.about;
+const ui = Vars.ui;
 
-ui.addMenuButton = (name, icon, clicked, user) => {
-	ui.addTable("menu", name, t => {
-		t.button(name, ui.getIcon(icon), clicked).height(48).size(210, 84);
-		if (user) user(t);
-	});
-};
-ui.addMenuButton("PicToLogic", "paste", () => {
-	ptl.show();
-});
+let menuGroupaux = new WidgetGroup();
+menuGroupaux.setFillParent(true);
+menuGroupaux.touchable = Touchable.childrenOnly;
+menuGroupaux.visible(() => state.isMenu());
+
+Core.scene.add(menuGroupaux)
+ui.menuFrag.build(menuGroupaux);
+
