@@ -1,2 +1,2 @@
 const about = Vars.ui.about;
-about.showCredits(); 
+about= new BaseDialog("hello")
