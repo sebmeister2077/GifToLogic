@@ -1,2 +1,5 @@
 const about = Vars.ui.about;
-about.showCredits(); 
+
+setTimeout(() => {
+    about.showCredits(); 
+}, 10000);
