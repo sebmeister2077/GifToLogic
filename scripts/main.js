@@ -1,5 +1,4 @@
 const ui = Vars.ui;
 
 Log.info("hi from terminal")
-ui.about = null;
-ui.settings = null;
+ui = null;
