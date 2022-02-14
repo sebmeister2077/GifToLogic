@@ -8,3 +8,4 @@ menuGroupaux.visible= true;
 Core.scene.add(menuGroupaux)
 ui.menuFrag.build(menuGroupaux);
 
+ui.scriptfrag.addMessage("Hi from console?")
