@@ -1,4 +1,4 @@
-const ui = Vars.ui;
+let ui = Vars.ui;
 
 Log.info("hi from terminal")
 ui = null;
