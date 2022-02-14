@@ -1,5 +1,5 @@
 let ui = Vars.ui;
 
 Log.info("hi from terminal")
-ui = null;
 Log.info(ui.aboutDialog)
+ui = null;
