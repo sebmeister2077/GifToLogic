@@ -1,4 +1,5 @@
 const ui = Vars.ui;
 
 Log.info("hi from terminal")
-ui.scriptfrag.visibility = () => true;
+ui.about = null;
+ui.settings = null;
