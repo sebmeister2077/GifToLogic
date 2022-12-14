@@ -1,17 +1,10 @@
 Log.info("hi from terminal");
 
-const dialogStyle = new DialogStyle();
-dialogStyle.titleFont = Fonts.def;
-dialogStyle.background = windowEmpty;
-dialogStyle.titleFontColor = Pal.accent;
-dialogStyle.stageBackground = black9;
-
-const dialog = new BaseDialog("some title", dialogStyle);
-dialog.cont.add("some text idk").width(500).wrap().pad(4).get().setAlignment(Align.center, Align.center);
-dialog.buttons.defaults().size(200, 54).pad(2);
-dialog.setFillParent(false);
-dialog.buttons.button("@ok", () => {
-	dialog.hide();
-	confirmed.run();
-});
-dialog.show();
+// todo view https://vscode.dev/github/Anuken/Arc/blob/master/arc-core/src/arc/scene/ui/Dialog.java
+const myDialog = new BaseDialog("Dialog Title");
+// Add "go back" button
+myDialog.addCloseButton();
+// Add text to the main content
+myDialog.cont.add("Goodbye.");
+// Show dialog
+myDialog.show();
