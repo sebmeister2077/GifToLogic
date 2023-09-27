@@ -12,5 +12,10 @@
 // listen for the event where a unit is destroyed
 Events.on(UnitDestroyEvent, (event) => {
 	// display toast on top of screen when the unit was a player
-	Vars.ui.hudfrag.showToast("Pathetic.");
+	try {
+		Vars.ui.hudfrag.showToast(Object.keys(this).join(", "));
+	} catch {}
+	try {
+		Vars.ui.hudfrag.showToast(Object.keys(globalThis).join(", "));
+	} catch {}
 });
