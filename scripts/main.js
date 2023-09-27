@@ -10,7 +10,7 @@
 // myDialog.show();
 
 // listen for the event where a unit is destroyed
-Events.on(UnitDestroyEvent, (event) => {
+Events.on(PlayerConnect, (event) => {
 	// display toast on top of screen when the unit was a player
 	try {
 		Vars.ui.hudfrag.showToast(Object.keys(this).join(", "));
