@@ -14,12 +14,13 @@ Events.on(ClientCreateEvent, (event) => {
 	// display toast on top of screen when the unit was a player
 	Vars.ui.hudfrag.showToast("client create");
 });
-Events.on(ContentInitEvent, (event) => {
-	// display toast on top of screen when the unit was a player
-	setTimeout(() => {
-		Vars.ui.hudfrag.showToast("content init");
-	}, 2000);
-});
+//this make the app crash
+// Events.on(ContentInitEvent, (event) => {
+// 	// display toast on top of screen when the unit was a player
+// 	setTimeout(() => {
+// 		Vars.ui.hudfrag.showToast("content init");
+// 	}, 2000);
+// });
 
 Events.on(ClientLoadEvent, (event) => {
 	// display toast on top of screen when the unit was a player
