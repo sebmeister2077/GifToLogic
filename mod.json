@@ -4,5 +4,6 @@
 	"author": "sebmeister2077",
 	"description": "Work in progress (not working)",
 	"version": "1.0-alpha",
-	"minGameVersion": "136"
+	"minGameVersion": "136",
+	"dependencies": ["ui_lib"]
 }
