@@ -16,5 +16,12 @@ Events.on(ClientCreateEvent, (event) => {
 });
 Events.on(ContentInitEvent, (event) => {
 	// display toast on top of screen when the unit was a player
-	Vars.ui.hudfrag.showToast("content init");
+	setTimeout(() => {
+		Vars.ui.hudfrag.showToast("content init");
+	}, 2000);
+});
+
+Events.on(ClientLoadEvent, (event) => {
+	// display toast on top of screen when the unit was a player
+	Vars.ui.hudfrag.showToast("client load");
 });
