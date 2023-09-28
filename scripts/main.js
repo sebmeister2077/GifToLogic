@@ -35,7 +35,7 @@ ui.onLoad(() => {
 		.size(240, 50);
 	ptl.cont.row();
 
-	ptl.cont.label(() => core.stage).center();
+	ptl.cont.label(() => "This is label...").center();
 
 	ptl.addCloseButton();
 });
