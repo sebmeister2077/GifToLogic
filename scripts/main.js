@@ -1,5 +1,5 @@
 const ui = require("ui_lib/library");
-
+var ptl;
 ui.addMenuButton("testbtn", "paste", () => {
 	ptl.show();
 });
