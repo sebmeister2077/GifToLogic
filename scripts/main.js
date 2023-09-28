@@ -12,5 +12,9 @@
 // listen for the event where a unit is destroyed
 Events.on(ClientCreateEvent, (event) => {
 	// display toast on top of screen when the unit was a player
-	Vars.ui.hudfrag.showToast("Hello");
+	Vars.ui.hudfrag.showToast("client create");
+});
+Events.on(ContentInitEvent, (event) => {
+	// display toast on top of screen when the unit was a player
+	Vars.ui.hudfrag.showToast("content init");
 });
