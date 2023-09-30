@@ -49,7 +49,7 @@ ui.onLoad(() => {
 				}
 			}, "GifToLogic worker").start();
 		})
-		.disabled(() => !coreLogic.gifbytes || !coreLogic.isWorking);
+		.disabled(() => !coreLogic.gifbytes || coreLogic.isWorking);
 
 	dialog.addCloseButton();
 });
