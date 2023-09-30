@@ -1,5 +1,5 @@
 const ui = require("ui_lib/library");
-const coreLogic = require("gittologic/core");
+const coreLogic = require("giftologic/core");
 
 var ptl = null;
 
