@@ -5,7 +5,7 @@ ui.onLoad(() => {
 	const buttonNames = "Gif to Logic";
 	let dialog = null;
 	ui.addMenuButton(buttonNames, Icon.paste, () => {
-		dialog;
+		dialog.show();
 	});
 	// Add button in Schematics dialog
 	Vars.ui.schematics.buttons.button(buttonNames, Icon.paste, () => {
