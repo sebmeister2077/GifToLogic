@@ -4,11 +4,12 @@ const coreLogic = require("giftologic/core");
 var ptl = null;
 
 const buttonNames = "Gif to Logic";
-ui.addMenuButton(buttonNames, Icon.paste, () => {
+ui.addMenuButton(buttonNames, "paste", () => {
 	ptl.show();
 });
 
 ui.onLoad(() => {
+	ui.addMenuButton(buttonNames, Icon.paste, () => {});
 	// Add button in Schematics dialog
 	Vars.ui.schematics.buttons.button(buttonNames, Icon.paste, () => {
 		ptl.show();
