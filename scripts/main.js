@@ -1,5 +1,5 @@
 const ui = require("ui_lib/library");
-const core = require("giftologic/core");
+const coreLogic = require("giftologic/core");
 
 ui.onLoad(() => {
 	const buttonNames = "Gif to Logic";
@@ -24,7 +24,7 @@ ui.onLoad(() => {
 			Vars.platform.showFileChooser(false, "gif", (file) => {
 				try {
 					const bytes = file.readBytes();
-					core.gifbytes = bytes;
+					coreLogic.gifbytes = bytes;
 					// coreLogic.image = new Pixmap(bytes);
 				} catch (e) {
 					ui.showError("Failed to load source gif", e);
@@ -34,22 +34,22 @@ ui.onLoad(() => {
 		.size(240, 50);
 
 	dialog.cont.row();
-	dialog.cont.label(() => core.workingStateLabel).center();
+	dialog.cont.label(() => coreLogic.workingStateLabel).center();
 	dialog.buttons
-		.button("Export", Icons.export, () => {
+		.button("Export", Icon.export, () => {
 			new java.lang.Thread(() => {
 				try {
-					core.exportGif(core.gifbytes);
+					coreLogic.exportGif(coreLogic.gifbytes);
 					dialog.hide();
 				} catch (e) {
 					Core.app.post(() => {
 						ui.showError("Failed to export schematic", e);
-						core.isWorking = false;
+						coreLogic.isWorking = false;
 					});
 				}
 			}, "GifToLogic worker").start();
 		})
-		.disabled(() => !core.gifbytes || !core.isWorking);
+		.disabled(() => !coreLogic.gifbytes || !coreLogic.isWorking);
 
 	dialog.addCloseButton();
 });
