@@ -28,7 +28,9 @@ ui.onLoad(() => {
 				try {
 					print(file);
 					const bytes = file.readBytes();
-					print(bytes);
+					print(bytes.length);
+					print(bytes[0]);
+					print(bytes[1]);
 					// core.image = new Pixmap(bytes);
 				} catch (e) {
 					ui.showError("Failed to load source gif", e);
