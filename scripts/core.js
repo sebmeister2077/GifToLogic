@@ -1,6 +1,4 @@
-const fs = require("fs");
-const gif = require("gif");
-
+const sharp = require("sharp")
 const core = {
 	//this is the base display
 	display: Blocks.logicDisplay,
@@ -10,11 +8,12 @@ const core = {
 
 	isWorking: false,
 	workingStateLabel: "",
-};
 
-core.exportGif = (gifBytes) => {
-	print(typeof fs.readFileSync);
-	print("Finish");
-};
+	exportGif: (gifBytes) => {
+		sharp(gifBytes).resize(300, 300).
+			print(typeof fs.readFileSync);
+		print("Finish");
+	},
+}
 
 module.exports = core;

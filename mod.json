@@ -5,5 +5,5 @@
 	"description": "Work in progress (not working)",
 	"version": "1.0-alpha",
 	"minGameVersion": "136",
-	"dependencies": ["ui_lib", "fs", "gif"]
+	"dependencies": ["ui_lib", "sharp"]
 }

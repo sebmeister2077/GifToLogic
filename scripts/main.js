@@ -37,7 +37,7 @@ ui.onLoad(() => {
 	dialog.cont.label(() => coreLogic.workingStateLabel).center();
 	dialog.buttons
 		.button("Export", Icon.export, () => {
-			new java.lang.Thread(() => {
+			new java.lang.Thread(async () => {
 				try {
 					coreLogic.exportGif(coreLogic.gifbytes);
 					dialog.hide();
