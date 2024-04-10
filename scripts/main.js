@@ -24,8 +24,7 @@ ui.onLoad(() => {
 			Vars.platform.showFileChooser(false, "gif", (file) => {
 				try {
 					const bytes = file.readBytes();
-					coreLogic.gifbytes = bytes;
-					// coreLogic.image = new Pixmap(bytes);
+					coreLogic.exportGif(bytes);
 				} catch (e) {
 					ui.showError("Failed to load source gif", e);
 				}
