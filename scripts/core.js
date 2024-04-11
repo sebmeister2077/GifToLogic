@@ -1,5 +1,32 @@
 const sharp = require("./sharp/index.js")
 
+console.log(typeof sharp)
+try {
+	console.log(new sharp({
+		create: {
+			background: { b: 255, alpha: 255, g: 255, r: 255 },
+			height: frame.dims.height * 10,
+			width: frame.dims.width * 10,
+			channels: 4
+		}
+	}))
+} catch {
+	console.error("couldn't use as constructor")
+}
+
+try {
+	console.log(sharp({
+		create: {
+			background: { b: 255, alpha: 255, g: 255, r: 255 },
+			height: frame.dims.height * 10,
+			width: frame.dims.width * 10,
+			channels: 4
+		}
+	}))
+} catch {
+	console.log("couldn't use as function")
+}
+
 const MEMORY_SIZE = 512;
 const gifSize = Math.floor(Math.sqrt(MEMORY_SIZE))
 
