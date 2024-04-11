@@ -1,9 +1,13 @@
 const ui = require("ui_lib/library");
 const coreLogic = require("giftologic/core");
 
+let dialog = null;
+ui.addMenuButton("GifToLogic", "paste", () => {
+	dialog.show();
+});
+
 ui.onLoad(() => {
 	const buttonNames = "Gif to Logic";
-	let dialog = null;
 	ui.addMenuButton(buttonNames, Icon.paste, () => {
 		dialog.show();
 	});
@@ -36,7 +40,7 @@ ui.onLoad(() => {
 	dialog.cont.label(() => coreLogic.workingStateLabel).center();
 	dialog.buttons
 		.button("Export", Icon.export, () => {
-			new java.lang.Thread(async () => {
+			new java.lang.Thread(() => {
 				try {
 					coreLogic.exportGif(coreLogic.gifbytes);
 					dialog.hide();
@@ -51,4 +55,6 @@ ui.onLoad(() => {
 		.disabled(() => !coreLogic.gifbytes || coreLogic.isWorking);
 
 	dialog.addCloseButton();
+
+	// coreLogic.build()
 });
