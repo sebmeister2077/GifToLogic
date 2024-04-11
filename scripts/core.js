@@ -1,4 +1,4 @@
-const sharp = require("sharp")
+const sharp = require("./sharp/index.js")
 
 const MEMORY_SIZE = 512;
 const gifSize = Math.floor(Math.sqrt(MEMORY_SIZE))
